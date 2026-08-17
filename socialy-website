@@ -1,0 +1,454 @@
+[index.html](https://github.com/user-attachments/files/31146162/index.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opega's Version Socialy</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+.hero{
+    width:100%;
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url("stan.jpg");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    padding:20px 10%;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.logo{
+    width:120px;
+    border-radius:10px;
+}
+
+nav ul{
+    list-style:none;
+}
+
+nav ul li{
+    display:inline-block;
+    margin:10px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+
+.btn{
+    background:#ff4da6;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+.btn:hover{
+    opacity:0.9;
+}
+
+.content{
+    margin-top:100px;
+    max-width:600px;
+}
+
+.content h1{
+    font-size:60px;
+}
+
+.content p{
+    margin:20px 0;
+    line-height:1.7;
+}
+
+.section{
+    padding:60px 10%;
+    background:white;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.search-box{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.record-form{
+    max-width:600px;
+    margin:auto;
+}
+
+.record-form input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+}
+
+.record-form button{
+    width:100%;
+}
+
+.record-item{
+    background:#f8f8f8;
+    padding:10px;
+    margin:10px 0;
+    border-radius:5px;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.feature-img{
+    max-width:350px;
+    width:100%;
+    margin-top:30px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+.stat-box{
+    background:#ff4da6;
+    color:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+@media(max-width:768px){
+
+.content h1{
+    font-size:40px;
+}
+
+nav{
+    flex-direction:column;
+}
+
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+
+<nav>
+<img src="download.jpg" class="logo">
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#records">Records</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<a href="#" class="btn">Download App</a>
+</nav>
+
+<div class="content" id="home">
+<h1>Opega's Version Socialy</h1>
+
+<p>
+Connect with new friends around the world,
+save records, track information and enjoy a modern social experience.
+</p>
+
+<a href="#records" class="btn">Join Now</a>
+
+<br><br>
+
+<input type="text" id="searchInput" class="search-box"
+placeholder="Search anything...">
+
+<img src="dad.jpg" class="feature-img">
+</div>
+
+</div>
+
+<section class="section" id="features">
+<h2>Features</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Find Friends</h3>
+<p>Meet and connect with new people.</p>
+</div>
+
+<div class="card">
+<h3>Save Records</h3>
+<p>Store your records directly in your browser.</p>
+</div>
+
+<div class="card">
+<h3>Calendar</h3>
+<p>Keep track of important dates.</p>
+</div>
+
+<div class="card">
+<h3>Fast Search</h3>
+<p>Search information quickly.</p>
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat-box">
+<h2>100+</h2>
+<p>Users</p>
+</div>
+
+<div class="stat-box">
+<h2>50+</h2>
+<p>Communities</p>
+</div>
+
+<div class="stat-box">
+<h2>24/7</h2>
+<p>Availability</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Calendar</h2>
+
+<center>
+<input type="date" id="calendar">
+</center>
+
+</section>
+
+<section class="section" id="records">
+
+<h2>Record Manager</h2>
+
+<div class="record-form">
+
+<input type="text" id="recordName"
+placeholder="Enter Record Name">
+
+<input type="number" id="recordValue"
+placeholder="Enter Amount">
+
+<button class="btn" onclick="saveRecord()">
+Save Record
+</button>
+
+<br><br>
+
+<button class="btn" onclick="clearRecords()">
+Delete All Records
+</button>
+
+<h3 style="margin-top:20px;">Saved Records</h3>
+
+<div id="recordList"></div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Profit / Loss Tracker</h2>
+
+<div class="record-form">
+
+<input type="number" id="income"
+placeholder="Income">
+
+<input type="number" id="expense"
+placeholder="Expense">
+
+<button class="btn" onclick="calculateProfit()">
+Calculate
+</button>
+
+<h3 id="result" style="margin-top:20px;"></h3>
+
+</div>
+
+</section>
+
+<section class="section" id="contact">
+
+<h2>Contact</h2>
+
+<center>
+
+<p>Instagram: stanley_stano090</p>
+
+<p>Email: socialy@example.com</p>
+
+<p>Website Owner: Stanley Opega</p>
+
+</center>
+
+</section>
+
+<footer>
+<p>© 2026 Opega's Version Socialy. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+function saveRecord(){
+
+let name=document.getElementById("recordName").value;
+let value=document.getElementById("recordValue").value;
+
+if(name==="" || value===""){
+alert("Fill all fields");
+return;
+}
+
+let records=
+JSON.parse(localStorage.getItem("records")) || [];
+
+records.push({
+name:name,
+value:value
+});
+
+localStorage.setItem(
+"records",
+JSON.stringify(records)
+);
+
+displayRecords();
+
+document.getElementById("recordName").value="";
+document.getElementById("recordValue").value="";
+}
+
+function displayRecords(){
+
+let records=
+JSON.parse(localStorage.getItem("records")) || [];
+
+let output="";
+
+records.forEach((record,index)=>{
+
+output+=`
+<div class="record-item">
+<strong>${record.name}</strong><br>
+Amount: ${record.value}
+</div>
+`;
+
+});
+
+document.getElementById("recordList").innerHTML=
+output;
+}
+
+function clearRecords(){
+
+if(confirm("Delete all records?")){
+
+localStorage.removeItem("records");
+
+displayRecords();
+
+}
+
+}
+
+function calculateProfit(){
+
+let income=
+Number(document.getElementById("income").value);
+
+let expense=
+Number(document.getElementById("expense").value);
+
+let total=income-expense;
+
+if(total>=0){
+
+document.getElementById("result").innerHTML=
+"Profit: "+total;
+
+}else{
+
+document.getElementById("result").innerHTML=
+"Loss: "+Math.abs(total);
+
+}
+
+}
+
+displayRecords();
+
+document.getElementById("searchInput")
+.addEventListener("keyup",function(){
+
+let value=this.value.toLowerCase();
+
+if(value.length>0){
+console.log("Searching:",value);
+}
+
+});
+
+</script>
+
+</body>
+</html>
